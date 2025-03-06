@@ -13,7 +13,7 @@ enum NeoPixelColors {
     //% block=Bleu
     Blue = 0x0000FF,
     //% block=Violet
-    Indigo = 0x4b00EF,
+    Indigo = 0x5B00FF,
     //% block=Rose
     Purple = 0xFF00FF,
     //% block=Blanc
