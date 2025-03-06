@@ -469,19 +469,18 @@ namespace Anneau_LED {
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="NeoPixel à la pin %pin|avec %numleds|leds en mode %mode"
-    //% numleds.default=12
+    //% blockId="neopixel_create" block="NeoPixel à la pin %pin|avec %numleds|leds"
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
     //% blockSetVariable=strip
-    export function create(pin: DigitalPin, numleds: number, mode: NeoPixelMode): Strip {
+    export function create(pin: DigitalPin, numleds: number): Strip {
         let strip = new Strip();
-        let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
+        let stride = 1 === NeoPixelMode.RGBW ? 4 : 3;
         strip.buf = pins.createBuffer(numleds * stride);
         strip.start = 0;
         strip._length = numleds;
-        strip._mode = mode || NeoPixelMode.RGB;
+        strip._mode = 1 || NeoPixelMode.RGB;
         strip._matrixWidth = 0;
         strip.setBrightness(128)
         strip.setPin(pin)
@@ -742,7 +741,7 @@ namespace distance {
 
 //% weight=5 color=#63A4A2 icon="\uf032"
 namespace affichage {
-    let display = Anneau_LED.create(DigitalPin.P2, 35, NeoPixelMode.RGB)
+    let display = Anneau_LED.create(DigitalPin.P2, 35)
     let nbWidth = [5, 3, 5, 5, 5, 5, 5, 5, 5, 5]; // Largeur de la matrice en LEDs
     let charwidth = [5, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
     let scrollSpeed = 300; // Temps entre chaque décalage 
