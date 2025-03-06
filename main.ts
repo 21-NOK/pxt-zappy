@@ -470,6 +470,7 @@ namespace Anneau_LED {
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
     //% blockId="neopixel_create" block="NeoPixel à la pin %pin|avec %numleds|leds en mode %mode"
+    //% numleds.default=12
     //% weight=90 blockGap=8
     //% parts="neopixel"
     //% trackArgs=0,2
