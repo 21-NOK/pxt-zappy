@@ -803,7 +803,7 @@ namespace affichage {
         display.show();
         basic.pause(scrollSpeed / 2);
         display.setPixelColor(0, Anneau_LED.colors(NeoPixelColors.Black));
-        display.setPixelColor(45, Anneau_LED.colors(NeoPixelColors.Black));
+        display.setPixelColor(5, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(10, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(15, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(20, Anneau_LED.colors(NeoPixelColors.Black));
