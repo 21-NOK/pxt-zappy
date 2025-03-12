@@ -743,7 +743,8 @@ namespace distance {
 namespace affichage {
     let display = Anneau_LED.create(DigitalPin.P2, 35)
     let nbWidth = [4, 2, 4, 4, 4, 4, 4, 4, 4, 4]; // Largeur de la matrice en LEDs
-    let charwidth = [5, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];    let scrollSpeed = 300; // Temps entre chaque décalage 
+    let charwidth = [4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4];    
+    let scrollSpeed = 300; // Temps entre chaque décalage 
     display.clear();
     display.show();
 
@@ -851,7 +852,7 @@ namespace affichage {
                 }
                 shift();
             }
-            shift(); // Décale toute la matrice
+            shift(); // Décale toute la matrice entre les caratère
 
         }
         for (let i = 0; i < 5; i++) {
@@ -894,6 +895,7 @@ namespace affichage {
                 }
                 shift(); // Décale toute la matrice
             }
+            shift(); // Décale toute la matrice entre les caratère
         }
         for (let i = 0; i < 5; i++) {
             shift();
