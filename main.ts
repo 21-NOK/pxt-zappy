@@ -850,6 +850,7 @@ namespace affichage {
                     }
                 }
                 shift();
+                shift(); // Décale toute la matrice
 
             }
 
@@ -892,7 +893,6 @@ namespace affichage {
                         display.setPixelColor(shiftedIndex, Anneau_LED.colors(rgb));
                     }
                 }
-                shift(); // Décale toute la matrice
                 shift(); // Décale toute la matrice
             }
         }
