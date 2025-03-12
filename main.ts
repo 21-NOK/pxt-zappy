@@ -812,8 +812,8 @@ namespace affichage {
 
     }
 
-
-    function affiche(text: string) {
+    //% block="affiche %text| stable en %rgb=neopixel_colors"
+    export function affiche(text: string, rgb: number) {
         display.clear()
         for (let l = 0; l <= text.length - 1; l++) {
             // Convertir en majuscule
@@ -823,7 +823,7 @@ namespace affichage {
             let letterPixels = charMap[charIndex]
             for (let index of letterPixels) {
                 index = index - 1;
-                display.setPixelColor(index, Anneau_LED.colors(NeoPixelColors.Red))
+                display.setPixelColor(index, Anneau_LED.colors(rgb))
             }
             display.show()
         }
