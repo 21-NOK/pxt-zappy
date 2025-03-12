@@ -742,7 +742,7 @@ namespace distance {
 //% weight=5 color=#63A4A2 icon="\uf032"
 namespace affichage {
     let display = Anneau_LED.create(DigitalPin.P2, 35)
-    let nbWidth = [5, 3, 5, 5, 5, 5, 5, 5, 5, 5]; // Largeur de la matrice en LEDs
+    let nbWidth = [4, 3, 5, 5, 5, 5, 5, 5, 5, 5]; // Largeur de la matrice en LEDs
     let charwidth = [5, 5, 5, 5, 5, 5, 5, 5, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
     let scrollSpeed = 300; // Temps entre chaque décalage 
     display.clear();
