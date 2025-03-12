@@ -822,7 +822,6 @@ namespace affichage {
             // Récupère la forme de la lettre
             let letterPixels = charMap[charIndex]
             for (let index of letterPixels) {
-                index = index - 1;
                 display.setPixelColor(index, Anneau_LED.colors(rgb))
             }
             display.show()
