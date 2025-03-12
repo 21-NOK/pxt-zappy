@@ -796,12 +796,6 @@ namespace affichage {
 
 
     function shift() {
-
-        display.show();
-        display.shift(-1);
-        basic.pause(scrollSpeed / 2);
-        display.show();
-        basic.pause(scrollSpeed / 2);
         display.setPixelColor(0, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(5, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(10, Anneau_LED.colors(NeoPixelColors.Black));
@@ -809,7 +803,12 @@ namespace affichage {
         display.setPixelColor(20, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(25, Anneau_LED.colors(NeoPixelColors.Black));
         display.setPixelColor(30, Anneau_LED.colors(NeoPixelColors.Black));
-
+        display.show();
+        display.shift(-1);
+        basic.pause(scrollSpeed / 2);
+        display.show();
+        basic.pause(scrollSpeed / 2);
+        
     }
 
     //% block="affiche %text| stable en %rgb=neopixel_colors"
