@@ -850,9 +850,8 @@ namespace affichage {
                     }
                 }
                 shift();
-                shift(); // Décale toute la matrice
-
             }
+            shift(); // Décale toute la matrice
 
         }
         for (let i = 0; i < 5; i++) {
