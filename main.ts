@@ -912,7 +912,7 @@ namespace affichage {
 
     }
 
-    //%block="luminosité %luminosité"
+    //%block="luminosité %luminosite"
     export function luminosite(luminosite: number)
     {
 
