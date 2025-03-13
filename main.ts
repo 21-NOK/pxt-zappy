@@ -912,7 +912,12 @@ namespace affichage {
 
     }
 
+    //%block="luminosité %luminosité"
+    export function luminosite(luminosite: number)
+    {
 
+        display.setBrightness(luminosite);
+    }
 
 
 }
