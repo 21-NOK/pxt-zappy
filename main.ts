@@ -938,5 +938,23 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
+    //% imageLiteral=1 async
+    //% block="montrer %text| en %rgb=neopixel_colors"
+    export function montrer(matrice: number[], rgb: number)
+    {
+        for(let i=0;i<35;i++)
+        {
+            if(matrice[i]==1)
+            {
+                display.setPixelColor(i, Anneau_LED.colors(rgb));
+            }
+            else
+            {
+                display.setPixelColor(i, Anneau_LED.colors(NeoPixelColors.Black));
+            }
+
+        }
+
+    }
 
 }
