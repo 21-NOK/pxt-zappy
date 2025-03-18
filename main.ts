@@ -939,7 +939,7 @@ namespace affichage {
     }
 
     //% block="afficher en %rgb=neopixel_colors"
-    //%imageLiteral=1 async
+    //%imageLiteral=2 async
     //% imageLiteralColumns=5
     //% imageLiteralRows=7
     export function montrer(matrice: string, rgb: number)
@@ -947,7 +947,7 @@ namespace affichage {
         
         for(let i=0;i<35;i++)
         {
-            if(matrice=='#')
+            if(matrice)
             {
                 display.setPixelColor(i, Anneau_LED.colors(rgb));
             }
