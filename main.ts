@@ -938,7 +938,7 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
-    //% imageLiteral=1 async
+    
     //% block="montrer %text| en %rgb=neopixel_colors"
     export function montrer(matrice: number[], rgb: number)
     {
