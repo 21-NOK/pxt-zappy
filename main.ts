@@ -924,7 +924,7 @@ namespace affichage {
 
 
     //%block="vitesse %vitesse"
-    //%vitesse.min=50 vitesse.max=1000 vitesse.default=300
+    //%vitesse.min=50 vitesse.max=500 vitesse.default=250
     export function vitesse(vitesse: number) {
         scrollSpeed = vitesse;
 
