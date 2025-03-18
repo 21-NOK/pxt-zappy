@@ -878,7 +878,7 @@ namespace affichage {
                     shift();
                 }
             }
-            else if (charIndex<10)
+            else if(charIndex<10)
             {
                 let letterPixels = numbers[charIndex]; // Récupère la forme de la lettre
 
