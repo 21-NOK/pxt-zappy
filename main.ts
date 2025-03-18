@@ -872,16 +872,16 @@ namespace affichage {
             let char = text[i].toUpperCase(); // Convertir en majuscule 
             
             let charIndex = char.charCodeAt(0)
-            scrollNumber(charIndex, Anneau_LED.colors(rgb));
+            
             if (charIndex == 32)            // si un espace est mit
             {
                 for (let i = 0; i < 2; i++) {
                     shift();
                 }
             }
-            else if(charIndex<10)
+            else if (charIndex<58 && charIndex>47)
             {
-                let letterPixels = numbers[charIndex]; // Récupère la forme de la lettre
+                let letterPixels = numbers[charIndex-47]; // Récupère la forme de la lettre
 
                 for (let j = nbWidth[charIndex]; j >= 0; j--) {
                     for (let index of letterPixels) {
