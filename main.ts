@@ -912,7 +912,7 @@ namespace affichage {
 
     }
 
-    //%block="luminosité %luminosite %"
+    //%block="luminosité de l'affichage %luminosite %"
     //%luminosite.min=0 luminosite.max=100 luminosite.default=100
     export function luminosite(luminosite: number)
     {
