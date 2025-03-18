@@ -942,11 +942,12 @@ namespace affichage {
     //%imageLiteral=1 async
     //% imageLiteralColumns=5
     //% imageLiteralRows=7
-    export function montrer(imageLiteral_ matrice, rgb: number)
+    export function montrer(matrice: string, rgb: number)
     {
+        let im = <Image><any>matrice;
         for(let i=0;i<35;i++)
         {
-            if(matrice[i]=='#')
+            if(im)
             {
                 display.setPixelColor(i, Anneau_LED.colors(rgb));
             }
