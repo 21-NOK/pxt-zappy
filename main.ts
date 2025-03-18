@@ -880,7 +880,7 @@ namespace affichage {
 
         for (let i = 0; i < text.length; i++) {
             let char = text[i];
-            if(text[i]>'9')
+            if(text[i]=='a')
             {
                 let char = text[i].toUpperCase(); // Convertir en majuscule 
             }
