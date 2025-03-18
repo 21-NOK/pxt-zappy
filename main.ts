@@ -879,9 +879,10 @@ namespace affichage {
                     shift();
                 }
             }
-            else if (charIndex<58 && charIndex>47)
+            else if (charIndex<58 && charIndex>47)              //entre 0 et 9
             {
-                let letterPixels = numbers[charIndex-47]; // Récupère la forme de la lettre
+                charIndex=charIndex-47;
+                let letterPixels = numbers[charIndex]; // Récupère la forme de la lettre
 
                 for (let j = nbWidth[charIndex]; j >= 0; j--) {
                     for (let index of letterPixels) {
