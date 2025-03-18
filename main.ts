@@ -938,8 +938,10 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
-    
     //% block="montrer %text| en %rgb=neopixel_colors"
+    //%imageLiteral=1
+    //% imageLiteralColumns=5
+    //% imageLiteralRows=7
     export function montrer(matrice: number[], rgb: number)
     {
         for(let i=0;i<35;i++)
