@@ -879,8 +879,12 @@ namespace affichage {
     export function scrollText(text: string, rgb: number) {
 
         for (let i = 0; i < text.length; i++) {
-            let char = text[i].toUpperCase(); // Convertir en majuscule 
-
+            let char = text[i];
+            if(text[i]>'9')
+            {
+                let char = text[i].toUpperCase(); // Convertir en majuscule 
+            }
+             
             let charIndex = char.charCodeAt(0)
             if (charIndex == 32)            // si un espace est mit
             {
