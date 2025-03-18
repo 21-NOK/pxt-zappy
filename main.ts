@@ -878,21 +878,37 @@ namespace affichage {
                     shift();
                 }
             }
+            else if (charIndex<10)
+            {
+                let letterPixels = numbers[charIndex]; // Récupère la forme de la lettre
+
+                for (let j = nbWidth[charIndex]; j >= 0; j--) {
+                    for (let index of letterPixels) {
+                        let shiftedIndex = index + j;
+
+                        if (shiftedIndex % 5 == 4) {
+                            display.setPixelColor(shiftedIndex, Anneau_LED.colors(rgb));
+                        }
+                    }
+                    shift(); // Décale toute la matrice
+                }
+
+            }
             else {
                 charIndex = charIndex - 65; // Convertir 'A'-'Z' en 0-25
-            }
+            
+                let letterPixels = charMap[charIndex]; // Récupère la forme de la lettre
 
-            let letterPixels = charMap[charIndex]; // Récupère la forme de la lettre
+                for (let j = charwidth[charIndex]; j >= 0; j--) {
+                    for (let index of letterPixels) {
+                        let shiftedIndex = index + j;
 
-            for (let j = charwidth[charIndex]; j >= 0; j--) {
-                for (let index of letterPixels) {
-                    let shiftedIndex = index + j;
-
-                    if (shiftedIndex%5 == 4) {
-                        display.setPixelColor(shiftedIndex, Anneau_LED.colors(rgb));
+                        if (shiftedIndex%5 == 4) {
+                            display.setPixelColor(shiftedIndex, Anneau_LED.colors(rgb));
+                        }
                     }
+                    shift(); // Décale toute la matrice
                 }
-                shift(); // Décale toute la matrice
             }
             shift(); // Décale toute la matrice entre les caratère
         }
