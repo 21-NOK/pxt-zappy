@@ -939,14 +939,14 @@ namespace affichage {
     }
 
     //% block="afficher en %rgb=neopixel_colors"
-    //%imageLiteral=1
+    //%imageLiteral=1 async
     //% imageLiteralColumns=5
     //% imageLiteralRows=7
-    export function montrer(matrice: number[], rgb: number)
+    export function montrer(imageLiteral_ matrice, rgb: number)
     {
         for(let i=0;i<35;i++)
         {
-            if(matrice[i]==1)
+            if(matrice[i]=='#')
             {
                 display.setPixelColor(i, Anneau_LED.colors(rgb));
             }
@@ -957,25 +957,6 @@ namespace affichage {
 
         }
 
-    }
-
-    // Créer un éditeur graphique 5x7 avec des cases cliquables
-    //% blockId=matrixLED5x7 block="⮜ Matrice 5x7 ⮞"
-    //% blockHidden=false
-    //% pattern.fieldEditor="grid"
-    //% pattern.fieldOptions.decompileLiterals=true
-    //% pattern.fieldOptions.width=5
-    //% pattern.fieldOptions.height=7
-    export function matrixLED5x7(): string {
-        return (
-            ".....\n" +
-            ".....\n" +
-            ".....\n" +
-            ".....\n" +
-            ".....\n" +
-            ".....\n" +
-            "....."
-        );
     }
 
 }
