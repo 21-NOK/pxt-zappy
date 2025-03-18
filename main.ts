@@ -870,8 +870,9 @@ namespace affichage {
 
         for (let i = 0; i < text.length; i++) {
             let char = text[i].toUpperCase(); // Convertir en majuscule 
-
+            
             let charIndex = char.charCodeAt(0)
+            scrollNumber(charIndex, Anneau_LED.colors(rgb));
             if (charIndex == 32)            // si un espace est mit
             {
                 for (let i = 0; i < 2; i++) {
