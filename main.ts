@@ -600,8 +600,8 @@ namespace distance {
         pins.i2cWriteBuffer(i2cAddr, buffer);
         return pins.i2cReadBuffer(i2cAddr, octet);
     }
-
-    function getID(): number {
+    //% block="ID"
+    export function getID(): number {
         let result = readRegister(0x010F, 1); //retoune 0xEB = 235
         return (result[0]);
     }
