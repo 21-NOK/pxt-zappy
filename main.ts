@@ -944,19 +944,21 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
-    //% block="afficher en %rgb=neopixel_colors"
+    //% block="afficher %matrice en %rgb=neopixel_colors"
     export function montrer(matrice: Image, rgb: number)
     {
 
-        for(let i=0;i<35;i++)
+        for(let x=0;x<5;x++)
         {
-            if(matrice)
+            for (let y = 0; y < 5; y++) 
             {
-                display.setPixelColor(i, Anneau_LED.colors(rgb));
-            }
-            else
-            {
-                display.setPixelColor(i, Anneau_LED.colors(NeoPixelColors.Black));
+                if (matrice.pixel(x, y)) 
+                {
+                    display.setPixelColor((x+y), Anneau_LED.colors(rgb));
+                }
+                else {
+                    display.setPixelColor((x+y), Anneau_LED.colors(NeoPixelColors.Black));
+                }
             }
 
         }
