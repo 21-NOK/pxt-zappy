@@ -954,10 +954,10 @@ namespace affichage {
             {
                 if (matrice.pixel(x, y)==true) 
                 {
-                    display.setPixelColor((x+y), Anneau_LED.colors(rgb));
+                    display.setPixelColor((x+y*5), Anneau_LED.colors(rgb));
                 }
                 else {
-                    display.setPixelColor((x+y), Anneau_LED.colors(NeoPixelColors.Black));
+                    display.setPixelColor((x+y*5), Anneau_LED.colors(NeoPixelColors.Black));
                 }
             }
 
