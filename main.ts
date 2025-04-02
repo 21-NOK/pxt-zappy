@@ -952,7 +952,7 @@ namespace affichage {
         {
             for (let y = 0; y < 5; y++) 
             {
-                if (matrice.pixel(x, y)) 
+                if (matrice.pixel(x, y)==true) 
                 {
                     display.setPixelColor((x+y), Anneau_LED.colors(rgb));
                 }
