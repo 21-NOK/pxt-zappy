@@ -948,9 +948,9 @@ namespace affichage {
     export function montrer(matrice: Image, rgb: number)
     {
 
-        for(let x=0;x<5;x++)
+        for(let y=0;y<5;y++)
         {
-            for (let y = 0; y < 5; y++) 
+            for (let x = 0; x < 5; x++) 
             {
                 if (matrice.pixel(x, y)==true) 
                 {
