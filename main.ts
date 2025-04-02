@@ -944,7 +944,7 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
-    //% block="afficher %matrice en %rgb=neopixel_colors"
+    //% block="en %rgb=neopixel_colors afficher"
     //% imageLiteral=1
     //% imageLiteralColumns=5
     //% imageLiteralRows=7
