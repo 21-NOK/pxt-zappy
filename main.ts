@@ -945,10 +945,12 @@ namespace affichage {
     }
 
     //% block="afficher %matrice en %rgb=neopixel_colors"
+    //% imageLiteralColumns=5
+    //% imageLiteralRows=7
     export function montrer(matrice: Image, rgb: number)
     {
 
-        for(let y=0;y<5;y++)
+        for(let y=0;y<7;y++)
         {
             for (let x = 0; x < 5; x++) 
             {
