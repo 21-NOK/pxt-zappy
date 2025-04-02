@@ -962,6 +962,7 @@ namespace affichage {
             }
 
         }
+        display.show();
 
     }
 
