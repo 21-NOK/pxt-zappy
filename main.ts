@@ -600,8 +600,8 @@ namespace distance {
         pins.i2cWriteBuffer(i2cAddr, buffer);
         return pins.i2cReadBuffer(i2cAddr, octet);
     }
-    //% block="ID"
-    export function getID(): number {
+    
+    function getID(): number {
         let result = readRegister(0x010F, 1); //retoune 0xEB = 235
         return (result[0]);
     }
@@ -727,7 +727,7 @@ namespace distance {
         }
 
 
-
+        pins.digitalWritePin(DigitalPin.P15, 0)
     }
 
     // note that Caml casing yields lower case
@@ -735,8 +735,10 @@ namespace distance {
 
     //% block="distance en mm"
     export function distance_en_mm(): number {
+        pins.digitalWritePin(DigitalPin.P15, 1)
         let result = readRegister(0x96, 2);
         return (result[0] << 8) | result[1];
+        pins.digitalWritePin(DigitalPin.P15, 0)
     }
 }
 
