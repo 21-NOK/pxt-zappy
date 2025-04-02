@@ -943,7 +943,7 @@ namespace affichage {
         luminosite=luminosite*2.55;
         display.setBrightness(luminosite);
     }
-/*
+
     //% block="afficher en %rgb=neopixel_colors"
     //%imageLiteral=1
     //% imageLiteralColumns=5
@@ -964,6 +964,6 @@ namespace affichage {
 
         }
 
-    }*/
+    }
 
 }
