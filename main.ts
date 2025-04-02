@@ -737,8 +737,10 @@ namespace distance {
         writeRegister16(0x87, 0x40);
         basic.pause(10);
         let result = readRegister(0x96, 2);
-        return (result[0] << 8) | result[1];
         writeRegister16(0x87, 0x00);
+        basic.pause(10);
+        return (result[0] << 8) | result[1];
+        
 
     }
 }
