@@ -968,4 +968,17 @@ namespace affichage {
 
     }
 
+
+    //% block="led"
+    //% imageLiteral=1
+    //% imageLiteralColumns=5
+    //% imageLiteralRows=7
+    //% shim=images::createImage
+    export function led(i: string): Image {
+        const im = <Image><any>i;
+        return im
+    }
+
+
+
 }
