@@ -727,7 +727,6 @@ namespace distance {
         }
 
 
-        pins.digitalWritePin(DigitalPin.P15, 0)
     }
 
     // note that Caml casing yields lower case
@@ -735,12 +734,8 @@ namespace distance {
 
     //% block="distance en mm"
     export function distance_en_mm(): number {
-        pins.digitalWritePin(DigitalPin.P15, 1)
-        basic.pause(100)
         let result = readRegister(0x96, 2);
         return (result[0] << 8) | result[1];
-        pins.digitalWritePin(DigitalPin.P15, 0)
-        basic.pause(100)
     }
 }
 
