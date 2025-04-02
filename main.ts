@@ -717,7 +717,7 @@ namespace distance {
                 0x00, /* 0x84 : not user-modifiable */
                 0x01, /* 0x85 : not user-modifiable */
                 0x00, /* 0x86 : clear interrupt, use ClearInterrupt() */
-                0x40  /* 0x87 : start ranging, If you want an automatic start after init() call,
+                0x00  /* 0x87 : start ranging, If you want an automatic start after init() call,
       put 0x40 in location 0x87 */
             ]
 
@@ -734,8 +734,12 @@ namespace distance {
 
     //% block="distance en mm"
     export function distance_en_mm(): number {
+        writeRegister16(0x87, 0x40);
+        basic.pause(10);
         let result = readRegister(0x96, 2);
         return (result[0] << 8) | result[1];
+        writeRegister16(0x87, 0x00);
+
     }
 }
 
