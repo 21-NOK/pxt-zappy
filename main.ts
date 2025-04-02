@@ -945,11 +945,11 @@ namespace affichage {
     }
 
     //% block="afficher en %rgb=neopixel_colors"
-    //%imageLiteral=1
     //% imageLiteralColumns=5
+    //% imageLiteralRow = 7
     export function montrer(matrice: string, rgb: number)
     {
-        
+
         for(let i=0;i<35;i++)
         {
             if(matrice[i])
