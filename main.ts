@@ -609,6 +609,8 @@ namespace distance {
 
     //% block="initalisation distance"
     export function initalisation_distance() {
+        pins.digitalWritePin(DigitalPin.P15, 1)
+        pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
         while (getID() != 235) {
             writeRegister16(0x0000, 0x01); // Soft reset
             basic.pause(100); // Attendre que le capteur redémarre
