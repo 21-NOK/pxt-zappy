@@ -944,20 +944,15 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
-    //% block="afficher en %rgb=neopixel_colors"
-    //% imageLiteral=1
-    //% imageLiteralColumns=5
-    //% imageLiteralRows=7
-    //% shim=images::createImage
-    export function montrer(matrice: string, rgb: number)
+    //% block="afficher %matrice en %rgb=neopixel_colors"
+    export function montrer(matrice: Image, rgb: number)
     {
-        const im = <Image><any>matrice;
 
         for(let y=0;y<7;y++)
         {
             for (let x = 0; x < 5; x++) 
             {
-                if (im.pixel(x, y)==true) 
+                if (matrice.pixel(x, y)==true) 
                 {
                     display.setPixelColor((x+y*5), Anneau_LED.colors(rgb));
                 }
@@ -970,7 +965,6 @@ namespace affichage {
         display.show();
 
     }
-/*
 
     //% block="led"
     //% imageLiteral=1
@@ -981,7 +975,7 @@ namespace affichage {
         const im = <Image><any>i;
         return im
     }
-*/
+
 
 
 }
