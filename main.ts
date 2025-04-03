@@ -843,7 +843,9 @@ namespace affichage {
 
     // Fonction pour faire défiler un nombre de droite à gauche
     //% block="affiche %num|en nombre en %rgb=neopixel_colors"
+    //% blockHidden=true
     export function scrollNumber(num: number, rgb: number) {
+        display.clear();
         let numStr = num.toString();
 
         for (let i = 0; i < numStr.length; i++) {
@@ -873,6 +875,7 @@ namespace affichage {
     // Fonction pour afficher du texte défilant
     //% block="affiche %text| en texte en %rgb=neopixel_colors"
     export function scrollText(text: string, rgb: number) {
+        display.clear();
 
         for (let i = 0; i < text.length; i++) {
             let char = text[i].toUpperCase(); // Convertir en majuscule 
@@ -944,6 +947,17 @@ namespace affichage {
         display.setBrightness(luminosite);
     }
 
+    //% block="led"
+    //% imageLiteral=1
+    //% imageLiteralColumns=5
+    //% imageLiteralRows=7
+    //% shim=images::createImage
+    export function led(i: string): Image {
+        const im = <Image><any>i;
+        return im
+    }
+
+
     //% block="afficher %matrice en %rgb=neopixel_colors"
     export function montrer(matrice: Image, rgb: number)
     {
@@ -966,15 +980,7 @@ namespace affichage {
 
     }
 
-    //% block="led"
-    //% imageLiteral=1
-    //% imageLiteralColumns=5
-    //% imageLiteralRows=7
-    //% shim=images::createImage
-    export function led(i: string): Image {
-        const im = <Image><any>i;
-        return im
-    }
+    
 
 
 
